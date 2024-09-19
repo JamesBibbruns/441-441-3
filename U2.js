@@ -244,7 +244,6 @@ function indexCheckLogin() {
     var username = getCookie(usernameCookieName);
     if (!username) {
         alert("Please log in");
-        window.location.href = "login.html"; // Redirect to login page after the alert
     } else {
         checkCookie(); // If logged in, update UI
     }
