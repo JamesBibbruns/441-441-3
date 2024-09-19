@@ -273,4 +273,21 @@ function redirectToRegister(event) {
 document.querySelector('.btns_more').addEventListener('click', function() {
     window.location.href = 'page7.html';
 });
-document.addEventListener('DOMContentLoaded', checkCookie);
+
+ window.onload = function() {
+    const pagesToCheck = [
+      'page1.html',
+      'page2.html',
+      'page3.html',
+      'page6.html',
+      'page7.html',
+      'page8.html',
+      'courseware.html'
+    ];
+
+    const currentPage = window.location.pathname.replace(/^\//, '');
+
+    if (pagesToCheck.includes(currentPage)) {
+      checkCookie();
+    }
+  };
