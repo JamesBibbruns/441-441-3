@@ -90,6 +90,13 @@ function clearCart() {
 }
 
 
+
+
+
+
+
+
+
 // Define global variables
 var usernameCookieName = "username";
 var passwordCookieName = "password";
@@ -274,7 +281,8 @@ document.querySelector('.btns_more').addEventListener('click', function() {
     window.location.href = 'page7.html';
 });
 
- window.onload = function() {
+
+window.onload = function() {
     const pagesToCheck = [
       'page1.html',
       'page2.html',
@@ -290,4 +298,4 @@ document.querySelector('.btns_more').addEventListener('click', function() {
     if (pagesToCheck.includes(currentPage)) {
       checkCookie();
     }
-  };
+};
