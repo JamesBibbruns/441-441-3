@@ -89,18 +89,26 @@ function clearCart() {
   updateCart(); // Refresh the cart display
 }
 
-// 定义全局变量
+
+
+
+
+
+
+
+
+// Define global variables
 var usernameCookieName = "username";
 var passwordCookieName = "password";
 
-// 获取cookie
+// Get cookie
 function getCookie(name) {
     var value = "; " + document.cookie;
     var parts = value.split("; " + name + "=");
     if (parts.length == 2) return parts.pop().split(";").shift();
 }
 
-// 设置cookie
+// Set cookie
 function setCookie(name, value, days) {
     var expires = "";
     if (days) {
@@ -111,7 +119,7 @@ function setCookie(name, value, days) {
     document.cookie = name + "=" + (value || "") + expires + "; path=/";
 }
 
-// 检查cookie中是否有用户名
+// Check if username exists in cookies
 function checkCookie() {
     var username = getCookie(usernameCookieName);
     if (username) {
@@ -119,7 +127,7 @@ function checkCookie() {
     }
 }
 
-// 导航栏点击事件
+// Navigation bar click event
 function navigationClick() {
     document.querySelectorAll("nav a").forEach(function(link) {
         link.addEventListener("click", function(event) {
@@ -131,7 +139,7 @@ function navigationClick() {
     });
 }
 
-// 注册表单提交事件
+// Register form submit event
 function registerFormSubmit() {
     document.getElementById("register-form").addEventListener("submit", function(event) {
         event.preventDefault();
@@ -143,7 +151,7 @@ function registerFormSubmit() {
     });
 }
 
-// 登录表单提交事件
+// Login form submit event
 function loginFormSubmit() {
     document.getElementById("login-form").addEventListener("submit", function(event) {
         event.preventDefault();
@@ -157,7 +165,7 @@ function loginFormSubmit() {
     });
 }
 
-// 登录页面注册按钮点击事件
+// Login page register button click event
 function loginRegisterButtonClick() {
     document.querySelector("#login-form button:not([type='submit'])").addEventListener("click", function(event) {
         event.preventDefault();
@@ -165,7 +173,7 @@ function loginRegisterButtonClick() {
     });
 }
 
-// 首页导航栏点击事件
+// Index page navigation bar click event
 function indexNavigationClick() {
     document.querySelectorAll("nav a").forEach(function(link) {
         link.addEventListener("click", function(event) {
@@ -180,7 +188,7 @@ function indexNavigationClick() {
     });
 }
 
-// 首页点击登录注册链接
+// Index page login/signup link click event
 function indexLoginSignupClick() {
     document.getElementById("login-signup-link").addEventListener("click", function(event) {
         event.preventDefault();
@@ -188,30 +196,30 @@ function indexLoginSignupClick() {
     });
 }
 
-// 首页检查登录状态
+// Index page check login status
 function indexCheckLogin() {
     checkCookie();
     indexNavigationClick();
     indexLoginSignupClick();
 }
 
-// 首页初始化
+// Initialize index page
 function initIndexPage() {
     indexCheckLogin();
 }
 
-// 注册页面初始化
+// Initialize register page
 function initRegisterPage() {
     registerFormSubmit();
 }
 
-// 登录页面初始化
+// Initialize login page
 function initLoginPage() {
     loginFormSubmit();
     loginRegisterButtonClick();
 }
 
-// 根据页面加载不同的初始化函数
+// Load different initialization functions based on the page
 function initPage() {
     var path = window.location.pathname;
     if (path.includes("index.html")) {
@@ -221,23 +229,28 @@ function initPage() {
     } else if (path.includes("login.html")) {
         initLoginPage();
     } else {
-        navigationClick(); // 确保在其他页面也调用 navigationClick 函数
+        navigationClick(); // Ensure navigationClick function is called on other pages
     }
 }
 
-// 页面加载完成后初始化
+// Initialize after the page loads
 window.onload = initPage;
 
 
 
 
-
-
-
-
-
-
-
+// Index page check login status
+function indexCheckLogin() {
+    var username = getCookie(usernameCookieName);
+    if (!username) {
+        alert("Please log in");
+        window.location.href = "login.html"; // Redirect to login page after the alert
+    } else {
+        checkCookie(); // If logged in, update UI
+    }
+    indexNavigationClick();
+    indexLoginSignupClick();
+}
 
 
 
