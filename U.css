@@ -515,6 +515,7 @@ p{
   text-transform: uppercase;
   position: relative;
   margin-top: 15px;
+  margin-left:50px;
   outline: none;
   transform: translateY(50px);
   animation: slideUp .8s ease-in-out  forwards 1s;
