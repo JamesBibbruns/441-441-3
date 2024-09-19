@@ -243,7 +243,7 @@ window.onload = initPage;
 function indexCheckLogin() {
     var username = getCookie(usernameCookieName);
     if (!username) {
-        alert("Please log in");
+        alert("Please login");
     } else {
         checkCookie(); // If logged in, update UI
     }
