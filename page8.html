@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Enquiry Form - [RTO Name]</title>
+<link rel="stylesheet" href="U.css">
+<style>
+</style>
+<script src="document.js"></script>
+</head>
+<body>
+    <header>  
+        <h1>Enquiry Form-Register</h1>
+    </header>  
+    <div class="logo-account">
+        <!-- Image -->
+        <img src="1.png" alt="Descriptive text for the image" style="width: 100px; height: 100px; position: relative; top: 0; left: 0; margin: 0;">
+        <!-- Login Link -->
+        <!-- Navigation -->
+    </div>
+    <nav>
+        <ul>
+        <li><a href="index.html">Home</a></li>
+        <li class="dropdown">
+            <a href="#">Project</a>
+            <ul class="dropdown-menu">
+                <li><a href="page2.html">Project 1</a></li>
+                <li><a href="page3.html">Project 2</a></li>
+                <li><a href="page1.html">Project 3</a></li>
+            </ul>
+        </li>
+        <li><a href="page6.html">About</a></li>
+        <li><a href="courseware.html">Courseware</a></li>
+        <li><a href="page8.html">Enquiry</a></li>
+        <li><a href="page7.html">Showcase</a></li>
+        <li id="login-signup-link"><a href="login.html">Login & Sign up</a></li>
+        </ul>
+    </nav>
+<div class="form-container">
+    <h2>Course Registration Enquiry Form</h2>
+    <form name="enquiryForm" onsubmit="return validateForm()" method="post">
+        <div class="form-group">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+        </div>
+        <div class="form-group">
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+        </div>
+        <div class="form-group">
+            <label for="course">Course of Interest:</label>
+            <select id="course" name="course" required>
+                <option value="">--Please select a course--</option>
+                <option value="course1">Web Development</option>
+                <option value="course2">Cybersecurity</option>
+                <option value="course3">Data Analysis</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="age">Age:</label>
+            <input type="number" id="age" name="age" required min="1" max="100">
+        </div>
+        <div class="form-group">
+            <label for="major">Major:</label>
+            <select id="major" name="major" required>
+                <option value="">--Please select a Major--</option>
+                <option value="ICTCT666">Advanced Diploma of Electrical - Engineering</option>
+                <option value="ICTCT888">Advanced Diploma of Electronics and Communications Engineering</option>
+                <option value="ICTST888">Advanced Diploma of Extractive Industries Management</option>
+                <option value="ICTST666">Advanced Diploma of Laboratory Management</option>
+                <option value="BSBTS888">Advanced Diploma of Maritime Operations (Master Unlimited)</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="gender">Gender:</label>
+            <select id="gender" name="gender" required>
+                <option value="">--Please select a Gender--</option>
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <button type="submit">Submit Enquiry</button>
+        </div>
+    </form>
+</div>
+<footer>
+    <p>Copyright &copy; 2024 IT School. All rights reserved.</p>
+</footer>
+<script src="U2.js"></script>
+</body>
+</html>

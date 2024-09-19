@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Shopping Cart</title>
+<link rel="stylesheet" href="U.css">
+</head>
+<body>
+  <header>
+    <h1>Courseware</h1>
+  </header>
+    <div class="logo-account">
+        <!-- Image -->
+        <img src="1.png" alt="Descriptive text for the image" style="width: 100px; height: 100px; position: relative; top: 0; left: 0; margin: 0;">
+        <!-- Login Link -->
+        <!-- Navigation -->
+    </div>
+    <nav>
+      <ul>
+      <li><a href="index.html">Home</a></li>
+      <li class="dropdown">
+          <a href="#">Project</a>
+          <ul class="dropdown-menu">
+              <li><a href="page2.html">Project 1</a></li>
+              <li><a href="page3.html">Project 2</a></li>
+              <li><a href="page1.html">Project 3</a></li>
+          </ul>
+      </li>
+      <li><a href="page6.html">About</a></li>
+      <li><a href="courseware.html">Courseware</a></li>
+      <li><a href="page7.html">Enquiry</a></li>
+      <li><a href="page8.html">Showcase</a></li>
+      <li id="login-signup-link"><a href="login.html">Login & Sign up</a></li>
+      </ul>
+  </nav>
+  <div class="container">
+    <div class="course">
+      <h2>Advanced Diploma of Building and Construction (Management)</h2>
+      <h3>This qualification is designed to meet the needs of builders or senior managers 
+        within the building and construction industry who apply knowledge of building, construction and sustainability systems and 
+        processes, structural principles, code...</h3>
+      <h3>Estimated duration:18 month(s) - 2 year(s)</h3>
+      <h3>Estimated fee:$<p>1000</p></h3>
+      <input type="number" value="1" class="quantity-input">
+      <button class="button add">Add</button>
+    </div>
+    <div class="course">
+      <h2>Advanced Diploma of Civil Construction</h2>
+      <h3>This qualification reflects the role of individuals working as managers in civil construction
+        who perform tasks that are broad, specialised, complex and technical and include strategic areas and initiating activities. ...</h3>
+      <h3>Estimated duration:18 month(s) - 2 year(s)</h3>
+      <h3>Estimated fee:$<p>2000</p></h3>
+      <input type="number" value="1" class="quantity-input">
+      <button class="button add">Add</button>
+    </div>
+    <div class="course">
+      <h2>Advanced Diploma of Drilling Management</h2>
+      <h3>This qualification reflects the role of managers in drilling who perform tasks that are broad, 
+        specialised, complex and technical, and include strategic areas and initiating activities. 
+        They are required to demonstrate self-directed application of 
+        theoretical and technical knowledge and initiate solutions to technical problems or management requirements.</h3>
+      <h3>Estimated duration:18 month(s) - 2 year(s)</h3>
+      <h3>Estimated fee:$<p>3000</p></h3>
+      <input type="number" value="1" class="quantity-input">
+      <button class="button add">Add</button>
+    </div>
+    <div class="course">
+      <h2>Advanced Diploma of ESI - Power Systems</h2>
+      <h3>This qualification provides the skills and knowledge to work in the electricity supply industry within distribution and transmission networks. 
+        The qualification allows individuals to specialise in one of the following areas.</h3>
+      <h3>Estimated duration:18 month(s) - 2 year(s)</h3>
+      <h3>Estimated fee:$<p>4000</p></h3>
+      <input type="number" value="1" class="quantity-input">
+      <button class="button add">Add</button>
+    </div>
+    <div class="course">
+      <h2>Advanced Diploma of Apparel, Fashion and Textiles</h2>
+      <h3>This qualification reflects the role of individuals who use wide-ranging specialised technical, 
+        creative or conceptual skills to express ideas and perspectives, 
+        with initiative and judgement in planning, design, technical or management functions in the apparel industry....</h3>
+      <h3>Estimated duration:18 month(s) - 2 year(s)</h3>
+      <h3>Estimated fee:$<p>5000</p></h3>
+      <input type="number" value="1" class="quantity-input">
+      <button class="button add">Add</button>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="course">
+      <h2><a href="page2.html">Advanced Diploma of Electrical - Engineering</a></h2>
+      <h3>Estimated fee:$<p>200</p></h3>
+      <input type="number" value="1" class="quantity-input">
+      <button class="button add">Add</button>
+    </div>
+    <div class="course">
+      <h2><a href="page2.html">Advanced Diploma of Electrical - Engineering</a></h2>
+      <h3>Estimated fee:$<p>300</p></h3>
+      <input type="number" value="1" class="quantity-input">
+      <button class="button add">Add</button>
+    </div>
+    <div class="course">
+      <h2><a href="page3.html">Advanced Diploma of Electronics and Communications Engineering</a></h2>
+      <h3>Estimated fee:$<p>400</p></h3>
+      <input type="number" value="1" class="quantity-input">
+      <button class="button add">Add</button>
+    </div>
+    <div class="course">
+      <h2><a href="page1.html">Advanced Diploma of Laboratory Management</a></h2>
+      <h3>Estimated fee:$<p>500</p></h3>
+      <input type="number" value="1" class="quantity-input">
+      <button class="button add">Add</button>
+    </div>
+    <div class="course">
+      <h2><a href="page1.html">Advanced Diploma of Maritime Operations (Master Unlimited)</a></h2>
+      <h3>Estimated fee:$<p>600</p></h3>
+      <input type="number" value="1" class="quantity-input">
+      <button class="button add">Add</button>
+    </div>
+  </div>
+  <div class="shopping-cart">
+    <h2>Shopping Cart</h2>
+    <table id="cart-table">
+    </table>
+    <p class="total">Total: $<span id="cart-total">0.00</span></p>
+    <button class="button Checkout" onclick="checkout()">Checkout</button>
+    <button class="button Clear" onclick="clearCart()">Clear Cart</button>
+  </div>
+<script src="U2.js"></script>
+<footer>
+  <p>Copyright &copy; 2024 IT School. All rights reserved.</p>
+</footer>
+</body>
+</html>
