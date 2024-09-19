@@ -273,3 +273,4 @@ function redirectToRegister(event) {
 document.querySelector('.btns_more').addEventListener('click', function() {
     window.location.href = 'page7.html';
 });
+document.addEventListener('DOMContentLoaded', checkCookie);
