@@ -8,6 +8,9 @@ body {
   flex-direction: column;
 }
 
+.user-name{
+  color:red;
+}
 header, footer {
   background-color: #333;
   color: white;
