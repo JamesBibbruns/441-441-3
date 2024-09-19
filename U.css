@@ -1,0 +1,933 @@
+/* James RenHuiayuan 223190623  */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+header, footer {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 1em;
+}
+
+.cart-container {
+  flex: 1;
+  width: 80%;
+  margin: 0 auto;
+}
+
+.cart-items {
+  background-color: #f2f2f2;
+  border-collapse: collapse;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.cart-items th, .cart-items td {
+  border: 1px solid #ddd;
+  padding: 12px;
+  text-align: left;
+}
+
+.cart-items th {
+  background-color: #4CAF50;
+  color: white;
+}
+
+.cart-items tbody tr:nth-child(odd) {
+  background-color: #f9f9f9;
+}
+
+.button {
+  background-color: #4CAF50;
+  border: none;
+  color: white;
+  padding: 12px 24px;
+  text-decoration: none;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.shopping-cart {
+  margin-top: 20px;
+}
+
+.total {
+  font-weight: bold;
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.shopping-cart table td {
+  padding-right: 20px;
+}
+
+footer {
+  flex-shrink: 0;
+}
+nav ul {
+list-style: none;
+padding: 0;
+margin: 0;
+}
+
+nav ul li {
+display: inline-block;
+position: relative;
+}
+
+nav ul li a {
+display: block;
+padding: 10px 20px;
+text-decoration: none;
+color: #333;
+}
+nav{
+  background-color: grey;
+}
+.dropdown-menu {
+display: none;
+position: absolute;
+background-color: #fff;
+box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.dropdown-menu li {
+display: block;
+}
+
+.dropdown:hover .dropdown-menu {
+display: block;
+}
+.registration-form {
+  max-width: 300px;
+  margin: 2em auto;
+  padding: 2em;
+  background: #f5f5f5;
+  border: 1px solid #e7e7e7;
+  text-align: center;
+}
+
+.registration-form h2 {
+  margin-bottom: 1em;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+input[type="text"] {
+  padding: 0.5em;
+  margin-bottom: 1em;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+button {
+  background-color: #5cb85c;
+  color: white;
+  border: none;
+  padding: 0.5em;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #4cae4c;
+}
+
+.search-section, .instructor-callout, .learn-daily {
+  margin-bottom: 2em;
+  padding: 1em;
+  background: #f5f5f5;
+  border: 1px solid #e7e7e7;
+}
+
+.course {
+  background-color: #f7f7f7;
+  border: 1px solid #ddd;
+  padding: 10px;
+  margin: 0 10px; /* Add spacing between courses */
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+  text-align: center;
+}
+.course:first-child {
+  margin-left: 0; /* Remove left margin for the first course */
+}
+.course:last-child {
+  margin-right: 0; /* Remove right margin for the last course */
+}
+.course h3 {
+  margin: 0;
+  padding-bottom: 5px;
+}
+.add-to-cart {
+  background-color: #5cb85c;
+  color: white;
+  padding: 5px 10px;
+  text-decoration: none;
+  display: inline-block;
+  margin-top: 5px;
+}
+.add-to-cart:hover {
+  background-color: #4cae4c;
+  cursor: pointer;
+}
+.container {
+  display: flex;
+  justify-content: center; /* Center the courses container */
+  flex-wrap: nowrap; /* Ensure items stay on the same line */
+  padding: 0;
+}
+
+.about-us {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.about-us h2 {
+  color: #333;
+}
+
+.about-us p {
+  max-width: 800px;
+  margin: auto;
+  padding: 1em;
+  line-height: 1.6;
+}
+
+/* Add to your existing CSS */
+
+article {
+  margin-bottom: 2em;
+  padding: 1em;
+  background: #f5f5f5;
+  border: 1px solid #e7e7e7;
+}
+
+article h3 {
+  color: #333;
+  margin-bottom: 0.5em;
+}
+
+.contact-info {
+  text-align: center;
+  background-color: #e9ecef;
+}
+
+/* Style the paragraphs within the articles */
+article p {
+  line-height: 1.6;
+  color: #333;
+}
+
+/* Style the "Get in Touch" section */
+.contact-info h3 {
+  text-align: center;
+  color: #007bff;
+}
+
+
+
+
+/* Add to your existing CSS */
+
+.projects-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  padding: 20px;
+}
+
+.project {
+  flex: 1;
+  min-width: 300px;
+  max-width: 350px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+    padding: 15px;
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.project-image {
+  max-width: 100%;
+  height: auto;
+  border-radius: 4px;
+  margin-bottom: 10px;
+}
+
+.btn {
+  display: inline-block;
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px 15px;
+  text-decoration: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #45a049;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .project {
+    max-width: 100%;
+  }
+}
+.container {
+            max-width: 960px;
+            margin: 20px auto;
+            padding: 0 20px;
+        }
+        section {
+            margin-bottom: 40px;
+        }
+        h2 {
+            color: #333;
+        }
+        p {
+            line-height: 1.6;
+        }
+.banner {
+            overflow: hidden;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%); /* 使用transform居中 */
+            width: 80%; /* Adjusted width */
+            height: 100%; /* Adjusted height */
+        }
+
+        .banner-image {
+            width: 100%;
+            height: 100%;
+            display: block;
+            position: absolute;
+            left: 0;
+            top: 0;
+            animation: slide 1.6s ease-in-out infinite;
+        }
+
+        @keyframes slide {
+            0%, 100% {
+                transform: translateX(0);
+            }
+            45% {
+                transform: translateX(-100%);
+            }
+        }
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Add this to include padding and border in the element's total width and height */
+  }
+  /* General body styling */
+  body {
+    background-color: #fafafa;
+    font-size: 12px;
+    line-height: 1.4; /* Improves text readability */
+  }
+  
+  /* Container for centered content */
+  #div2 {
+    width: 1080px;
+    margin: 0 auto; /* Centers the div horizontally */
+  }
+  
+  /* Page section styling */
+  .page1 {
+    background-color: wheat;
+    padding: 20px 0;
+    text-align: center; /* Centers the user1 div horizontally */
+    height:750px;
+  }
+  
+  /* User login container styling */
+  .user1 {
+    width: 400px;
+    background-color: grey;
+    margin: 20px auto; /* Centers the div horizontally and adds margin */
+    padding: 20px; /* Adds padding inside the user1 div */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Adds a subtle shadow for depth */
+    border-radius: 4px; /* Rounds the corners of the user1 div */
+  }
+  
+  /* User login title styling */
+  .user1 h3 {
+    font-size: 18px;
+    font-weight: bold;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 10px; /* Adds space below the title */
+    margin-bottom: 20px; /* Adds space below the title */
+  }
+  
+  /* User input field styling */
+  .user3 {
+    margin-bottom: 15px; /* Adds space below each input group */
+    position: relative; /* Needed for the pseudo-element positioning */
+  }
+  
+  /* Style the labels inside the user3 div, hide them visually but keep them accessible */
+  .user3 .item-lable {
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #999;
+  }
+  
+  /* Style the input fields */
+  .user3 .item-content {
+    border: 1px solid #bdbdbd;
+    width: 100%; /* Make the input take the full width */
+    height: 40px; /* Adjust input height */
+    font-size: 15px;
+    padding: 0 10px; /* Padding inside the input field */
+    border-radius: 4px; /* Rounds the corners of the input field */
+  }
+  
+  /* Submit button styling */
+  .submit {
+    display: block;
+    width: 100%;
+    height: 40px;
+    background-color:green;
+    text-align: center;
+    font-size: 20px;
+    color: white;
+    line-height: 40px;
+    border: none; /* Removes the default border */
+    border-radius: 4px; /* Rounds the corners of the button */
+    cursor: pointer; /* Changes the cursor to a pointer when hovering over the button */
+    margin-top: 20px; /* Adds space above the button */
+  }
+  
+  /* Link styling */
+  .link-item a {
+    color: black;
+    text-decoration: none;
+    margin-left: 10px; /* Adds space between links */
+  }
+  
+  /* Hover effect for links */
+  .link-item a:hover {
+    text-decoration: underline;
+  }
+
+
+
+
+
+
+
+        * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --secondary-color: #151226;
+  --contrast-color: white;
+}
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 100%;
+  z-index: -10;
+  background-color: var(--contrast-color);
+}
+
+.container-2 {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  color: #fff;
+  animation: expand .8s ease forwards;
+  background-color: var(--secondary-color);
+  position: relative;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  transition: all .8s ease;
+}
+
+.container_content {
+ width: 50%;
+}
+
+.container_content_inner {
+  width: 80%;
+  margin-left: 80px;
+}
+
+.container_outer_img {
+  margin: 50px;
+  width: 50%;
+  overflow: hidden;
+}   
+    
+.container_img {
+  width: 100%;
+  animation: slideIn 1.5s ease-in-out forwards;
+}
+
+.par {
+  height: auto;
+  overflow: hidden;
+}
+
+p{
+  line-height: 28px;
+  transform: translateY(300px);
+  animation: slideUp .8s ease-in-out forwards .8s;
+}
+
+.btns {
+  height: 100%;
+  position: relative;
+  width: 150px;
+  overflow: hidden;
+}
+
+.btns_more {
+  background: transparent;
+  border: 1px solid var(--contrast-color);
+  border-radius: 50px;
+  padding: 8px 12px;
+  color: #BF307F;
+  font-size: 16px;
+  text-transform: uppercase;
+  position: relative;
+  margin-top: 15px;
+  outline: none;
+  transform: translateY(50px);
+  animation: slideUp .8s ease-in-out  forwards 1s;
+}
+
+.title {
+  overflow: hidden;
+  height: auto;
+}
+
+h1 {
+    font-size: 40px;
+    color: var(--contrast-color);
+    margin-bottom: 20px;
+    transform: translateY(100px);
+    animation: slideUp .8s ease forwards .5s;
+}
+
+@keyframes slideIn {
+  0% {
+    transform: translateX(500px) scale(.2);
+  }
+  100% {
+    transform: translateX(0px) scale(1);
+  }
+}
+
+@keyframes slideUp {
+  0% {
+    transform: translateY(300px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+@keyframes expand {
+  0% {
+    transform: translateX(1400px);
+  }
+  100% {
+    transform: translateX(0px);
+  }
+}
+
+
+
+
+
+
+
+.header-content {
+  display: flex;
+  align-items: center;
+}
+
+.login-link {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 15px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bolder; /* Changed from font-size to font-weight */
+    position: absolute;
+    right: 10px; /* Positions the link 10 pixels from the right edge of the page */
+    font-size: 25px; /* Sets the font size */
+}
+
+/* Hover effect for the login link */
+.login-link:hover {
+    background-color: #0056b3; /* Darker background on hover */
+    text-decoration: none; /* Ensures no underline on hover */
+}
+
+/* Clearfix for the nav to ensure it only contains its child elements' margins, not its own */
+nav:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+
+
+
+
+
+
+
+
+.hero-banner {
+    width: 100%;
+    height: 600px;
+    background: linear-gradient(to bottom, #69b3e7, #1c7cd4);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+  }
+.hero-banner img {
+    max-width: 100%;
+    height: auto;
+  }
+.hero-text {
+    margin: 0 20px;
+  }
+  .hero-btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #f66d22;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+  }
+.hero-btn:hover {
+    background-color: #e55b00;
+}
+
+
+
+
+.calculator {
+    background-color: #ffffff;
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    margin-left: 35%;
+    margin-top: 150px;
+}
+
+#display {
+    width: 100%;
+    height: 80px;
+    text-align: right;
+    font-size: 3em;
+    padding: 0 20px;
+    border: none;
+}
+
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 10px;
+    padding: 20px;
+}
+
+
+button:hover {
+    background-color: #d0d0d0;
+}
+
+
+
+        #todo-app {
+    width: 300px;
+    margin: auto;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#task-list {
+    list-style: none;
+    padding: 0;
+}
+
+#task-list li {
+    margin: 10px 0;
+    background: #f9f9f9;
+    border: 1px solid #ddd;
+    padding: 10px;
+    cursor: pointer;
+}
+
+#task-list li.completed {
+    text-decoration: line-through;
+    color: #ccc;
+}
+
+    body { font-family: Arial, sans-serif; }
+    .form-container { max-width: 600px; margin: auto; padding: 20px; }
+    .form-group { margin-bottom: 15px; }
+    label { display: block; margin-bottom: 5px; }
+    input[type="text"],
+    input[type="email"],
+    select { width: 100%; padding: 10px; margin-bottom: 10px; }
+    .error { color: red; }
+    button { padding: 10px 20px; cursor: pointer; }
+/* Styling for the cookieInfo div */
+#cookieInfo {
+  background-color: white;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  max-width: 350px;
+  margin: auto;
+  text-align: center;
+}
+
+/* Styling for labels */
+label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: 500;
+  color: #333;
+}
+
+/* Styling for input fields */
+input[type="text"],
+input[type="password"] {
+  width: calc(100% - 20px);
+  padding: 15px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  transition: border-color 0.3s ease;
+}
+
+input[type="text"]:focus,
+input[type="password"]:focus {
+  outline: none;
+  border-color: #007bff;
+}
+
+/* Styling for buttons */
+button {
+  padding: 10px 20px;
+  margin: 5px 0;
+  border: none;
+  border-radius: 4px;
+  background-color: #007bff;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+/* Additional styling for the second button */
+button:last-of-type {
+  background-color: #ffc107;
+}
+
+button:last-of-type:hover {
+  background-color: #e0a800;
+}
+
+/* Align buttons in a row */
+#cookieInfo button {
+  display: inline-block;
+  margin-right: 10px;
+}
+
+#cookieInfo button:last-of-type {
+  margin-right: 0;
+}
+
+
+    .logo-account {
+    display: flex;          /* Enable flex context */
+    align-items: center;    /* Vertically center the content */
+    justify-content: space-between; /* Place the items with space between them */
+    }
+
+
+
+
+/* Login form container styling */
+/* Login Form Styling */
+.login-form {
+  max-width: 400px;
+  margin: 2em auto;
+  padding: 2em;
+  background: #f5f5f5;
+  border: 1px solid #e7e7e7;
+  text-align: center;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  border-radius: 5px;
+}
+
+.login-form form {
+  display: flex;
+  flex-direction: column;
+}
+
+.login-form label {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.login-form input[type="text"],
+.login-form input[type="password"] {
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 16px;
+  transition: border-color 0.3s ease;
+}
+
+.login-form input[type="text"]:focus,
+.login-form input[type="password"]:focus {
+  outline: none;
+  border-color: #007bff;
+}
+
+.login-form button {
+  padding: 10px 20px;
+  margin: 5px 0;
+  border: none;
+  border-radius: 4px;
+  background-color: #5cb85c;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.login-form button[type="submit"] {
+  background-color: #4CAF50;
+}
+
+.login-form button[type="submit"]:hover {
+  background-color: #45a049;
+}
+
+.login-form button[type="button"] {
+  background-color: #f0ad4e;
+}
+
+.login-form button[type="button"]:hover {
+  background-color: #ec971f;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .login-form {
+    width: 90%;
+    margin: 2em 5%;
+  }
+}
+
+/* Register Form Styling */
+.register-form {
+  max-width: 400px;
+  margin: 2em auto;
+  padding: 2em;
+  background: #f5f5f5;
+  border: 1px solid #e7e7e7;
+  text-align: center;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  border-radius: 5px;
+}
+
+.register-form form {
+  display: flex;
+  flex-direction: column;
+}
+
+.register-form label {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.register-form input[type="text"],
+.register-form input[type="password"] {
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 16px;
+  transition: border-color 0.3s ease;
+}
+
+.register-form input[type="text"]:focus,
+.register-form input[type="password"]:focus {
+  outline: none;
+  border-color: #007bff;
+}
+
+.register-form button {
+  padding: 10px 20px;
+  margin: 5px 0;
+  border: none;
+  border-radius: 4px;
+  background-color: #5cb85c;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.register-form button[type="submit"] {
+  background-color: #4CAF50;
+}
+
+.register-form button[type="submit"]:hover {
+  background-color: #45a049;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .register-form {
+    width: 90%;
+    margin: 2em 5%;
+  }
+}
+
+.logo-account img{
+  width: 100px;
+  height: 100px; 
+  position: relative;
+  top: 0; 
+  left: 0;
+  margin: 0;
+}
