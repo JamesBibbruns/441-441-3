@@ -931,3 +931,7 @@ button:last-of-type:hover {
   left: 0;
   margin: 0;
 }
+
+#login-signup-link a{
+  color:red;
+}
