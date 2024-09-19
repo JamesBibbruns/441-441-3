@@ -1,5 +1,3 @@
-<script src="U2.js"></script>
-<script>
   // Cart functionality
   const addButtons = document.querySelectorAll('.button.add');
   const cartTable = document.getElementById('cart-table');
@@ -225,4 +223,3 @@
   document.querySelector('.btns_more')?.addEventListener('click', () => {
     window.location.href = 'page7.html';
   });
-</script>
