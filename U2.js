@@ -233,7 +233,9 @@ window.onload = initPage;
 
 
 
-
+window.onload = function() {
+  checkCookie(); // This will run when the page loads
+};
 
 
 
