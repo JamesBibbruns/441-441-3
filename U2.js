@@ -1,43 +1,45 @@
-// 获取所有添加按钮
+/'James Renhuaiyuan 223190623'/
+// Get all "Add" buttons
 const addButtons = document.querySelectorAll('.button.add');
 
-// 获取购物车表格和总金额元素
+// Get the cart table and total amount element
 const cartTable = document.getElementById('cart-table');
 const cartTotal = document.getElementById('cart-total');
 
-// 购物车对象，用来存储课程及其数量
+// Cart object to store courses and their quantities
 let cart = {};
 
-// 为每个“添加”按钮绑定事件
+// Attach event listener to each "Add" button
 addButtons.forEach((button, index) => {
   button.addEventListener('click', () => {
-    // 获取课程信息
+    // Get course information
     const courseDiv = button.closest('.course');
     const courseId = courseDiv.querySelector('h2').textContent;
     const courseFee = parseFloat(courseDiv.querySelector('h3 p').textContent);
     const courseQuantity = parseInt(courseDiv.querySelector('.quantity-input').value);
 
-    // 如果课程已经在购物车中，更新数量
+    // If the course is already in the cart, update the quantity
     if (cart[courseId]) {
       cart[courseId].quantity += courseQuantity;
     } else {
+      // Add new course to the cart
       cart[courseId] = {
         fee: courseFee,
         quantity: courseQuantity
       };
     }
 
-    // 更新购物车界面
+    // Update the cart display
     updateCart();
   });
 });
 
-// 更新购物车界面
+// Function to update the cart display
 function updateCart() {
-  // 清空购物车表格
+  // Clear the cart table
   cartTable.innerHTML = '';
 
-  // 遍历购物车对象，更新表格
+  // Iterate through the cart object and update the table
   let total = 0;
   for (const courseId in cart) {
     const item = cart[courseId];
@@ -51,38 +53,40 @@ function updateCart() {
     `;
     cartTable.appendChild(row);
 
-    // 计算总金额
+    // Calculate the total amount
     total += item.fee * item.quantity;
   }
 
-  // 更新总金额显示
+  // Update the total amount display
   cartTotal.textContent = total.toFixed(2);
 
-  // 为每个移除按钮绑定事件
+  // Attach event listener to each "Remove" button
   const removeButtons = document.querySelectorAll('.remove');
   removeButtons.forEach(button => {
     button.addEventListener('click', () => {
       const courseId = button.getAttribute('data-course');
-      delete cart[courseId]; // 移除购物车中的课程
-      updateCart(); // 重新更新购物车
+      delete cart[courseId]; // Remove the course from the cart
+      updateCart(); // Refresh the cart display
     });
   });
 }
 
-// 结账功能
+// Checkout function
 function checkout() {
+  // If the cart is empty, show an alert
   if (Object.keys(cart).length === 0) {
     alert('Your cart is empty.');
     return;
   }
+  // Display a thank you message and the total amount
   alert('Thank you for your purchase! Total: $' + cartTotal.textContent);
-  clearCart();
+  clearCart(); // Clear the cart after checkout
 }
 
-// 清空购物车功能
+// Function to clear the cart
 function clearCart() {
-  cart = {};
-  updateCart();
+  cart = {}; // Reset the cart object
+  updateCart(); // Refresh the cart display
 }
 
 // 定义全局变量
