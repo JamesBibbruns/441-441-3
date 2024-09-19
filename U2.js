@@ -237,8 +237,6 @@ function initPage() {
 window.onload = initPage;
 
 
-
-
 // Index page check login status
 function indexCheckLogin() {
     var username = getCookie(usernameCookieName);
@@ -250,10 +248,6 @@ function indexCheckLogin() {
     indexNavigationClick();
     indexLoginSignupClick();
 }
-
-
-
-
 
 
 function validateForm() {
@@ -282,3 +276,7 @@ function redirectToRegister(event) {
     // Redirect to the register page
     window.location.href = "register.html";
 }
+
+document.querySelector('.btns_more').addEventListener('click', function() {
+    window.location.href = 'page7.html';
+});
