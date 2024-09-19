@@ -204,13 +204,7 @@
 
     // Check login status on specific pages
     const pagesToCheck = [
-      'page1.html',
-      'page2.html',
-      'page3.html',
-      'page6.html',
-      'page7.html',
-      'page8.html',
-      'courseware.html'
+      '/courseware.html'
     ];
     const currentPage = path.replace(/^\//, '');
     if (pagesToCheck.includes(currentPage)) {
