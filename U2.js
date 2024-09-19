@@ -90,13 +90,6 @@ function clearCart() {
 }
 
 
-
-
-
-
-
-
-
 // Define global variables
 var usernameCookieName = "username";
 var passwordCookieName = "password";
@@ -280,9 +273,3 @@ function redirectToRegister(event) {
 document.querySelector('.btns_more').addEventListener('click', function() {
     window.location.href = 'page7.html';
 });
-function checkCookie123() {
-    var username = getCookie(usernameCookieName);
-    if (username) {
-        document.getElementById("login-signup-link-1").innerHTML = "Welcome " + username;
-    }
-}
